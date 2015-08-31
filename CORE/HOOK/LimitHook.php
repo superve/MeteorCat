@@ -15,7 +15,7 @@
 		*/
 		public static function Load($arguments = NULL){
 			//Load Config
-			self::$conf=Basic::$conf['Limit'];
+			self::$conf	=	&Basic::$conf['Limit'];
 			
 			//Call Ip Method
 			self::Ip();	
@@ -54,7 +54,7 @@
 			return;
 			
 		}
-		
+		//-------------------------End-------------------------
 		
 		
 		

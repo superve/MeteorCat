@@ -25,9 +25,19 @@
 	//Hook Diretory
 	$config['Path']['Hook'] = $core.'HOOK/';
 	
+	//Application Diretory
+	$app=$dir.'APP/';
+	$config['Path']['APP'] = $app;
+	
+	//Application Diretory
+	$config['Path']['Controller'] = $app.'Controller/';
+	
+	//System Controller
+	$config['Path']['SYS']	=	$core; 
+	
 	
 	//------------------Limit-------------------------
-	//Ip Limit
+	//Limited IP
 	//Example:
 	/*
 	*$config['Limit']['Ip']['ALL'] = TRUE; //Allow All
@@ -38,8 +48,23 @@
 	$config['Limit']['Ip']['ALL'] = TRUE;
 	
 	
+	//-------------------URL Model------------------------
+	//Example:
+	/*
+	*$config['URL']['MODEL']='PATH_INFO';
+		index.php/Controller/Method	=>	Module(Folder)	->	Controller(class)	->	Method
+	*$config['URL']['MODEL']=QUERY_STRING;
+		index.php?Controller=Method	=>	Module(Folder)	->	Controller(class)	->	Method
+	*/
+	$config['URL']['Model'] = 'PATH_INFO';
 	
-		
-	//===========================End==========================
-		
+	//Default Controller & Method
+	$config['URL']['Class'] = 'Hello';
+	$config['URL']['Method'] = 'Index';
+	
+	
+	
+	
+	
+	//===========================End==========================	
 	return $config;

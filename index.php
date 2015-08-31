@@ -6,7 +6,6 @@
 	*Email:guixin2010@live.cn
 	*/
 	
-	
 	//Access Flag
 	Defined('FLAG')	or	Define('FLAG','flag');
 	
